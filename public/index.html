@@ -2,23 +2,72 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with govirtuo.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div id="car">
-      <input class="js-name" type="text" placeholder="Car name"/>
-      <input class="js-price-by-day" type="number" placeholder="Price by day"/>
-      <input class="js-price-by-km" type="number" placeholder="Price by km"/>
+    <div class="container">
+      <div class="jumbotron" >
+        <h1 class="text-center">Price Simulator</h1>
+        <p class="text-center">Calculate how much you will need to pay to rent a car and how much each creditor will take from you</p>
+      </div>
+      <div class="row">
+        <div class="form-group col" id="car">
+          <label for="carname" >Car name :</label>
+          <input class="js-name form-control" type="text" placeholder="Car name"/>
+        </div>
+        
+        <div class="form-group col" id="rental">
+          <label for="dn">Driver name :</label>
+          <input class="js-name form-control" type="text" placeholder="Driver name"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col" id="car">
+          <label for="pbd">Price by day :</label>
+          <input class="js-price-by-day form-control" type="number" placeholder="Price by day"/>
+        </div>
+    
+        <div class="form-group col" id="car">
+          <label for="pbk">Price by km :</label>
+          <input class="js-price-by-km form-control" type="number" placeholder="Price by km"/>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="form-group col" id="rental">
+          <label for="rbd">Rental begin date :</label>
+          <input class="js-begin form-control" type="date" placeholder="Rental begin date"/>
+        </div>
+        
+        <div class="form-group col" id="rental">
+          <label for="red">Rental end date :</label>
+          <input class="js-end form-control" type="date" placeholder="Rental end date"/>
+        </div>
+      </div>
+      
+      
+      <div class="form-group" id="rental">
+        <label for="dik">Distance in km :</label>
+        <input class="js-distance form-control" type="number" placeholder="Distance in km"/>
+      </div>
+      
+      <div class="form-group form-check" id="rental">
+        <label class="form-check-label">
+          <input class="js-option form-check-input" type="checkbox"> Deductible option
+        </label>
+      </div>
+      <button id="compute" type="submit" class="btn btn-primary">Compute</button>
+      <table class="table table-striped mt-3" id="actors">
+        
+      </table>
+      <script src="virtuo.js"></script>
+      <script src="index.js"></script>
     </div>
-    <div id="rental">
-      <input class="js-name" type="text" placeholder="Driver name"/>
-      <input class="js-begin" type="date" placeholder="Rental begin date"/>
-      <input class="js-end" type="date" placeholder="Rental end date"/>
-      <input class="js-distance" type="number" placeholder="Distance in km"/>
-      <input class="js-option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script src="virtuo.js"></script>
-    <script src="index.js"></script>
   </body>
 </html>
